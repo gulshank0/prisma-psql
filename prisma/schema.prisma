@@ -10,7 +10,7 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  url      = "process.env.DB_URI"
+  url      = "postgresql://noendb_owner:npg_8ToNg6mjDqIW@ep-proud-wildflower-a1xsvytl-pooler.ap-southeast-1.aws.neon.tech/noendb?sslmode=require"
 }
 
 model User {
@@ -26,4 +26,5 @@ model todo {
   title     String
   done      Boolean @default(false)
 description String
+userId Int
 }
